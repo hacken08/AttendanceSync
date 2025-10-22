@@ -1,0 +1,62 @@
+[
+    {
+        "employee_code": 58,
+        "working_hours": 11,
+        "employee_fname": "HONEY MANSA",
+        "sunday_duty": false
+    },
+    {
+        "employee_code": 56,
+        "working_hours": 11,
+        "employee_fname": "AMAN S BALDEV SAHARNA",
+        "sunday_duty": false
+    },
+    {
+        "employee_code": 98,
+        "employee_fname": "KARAN SHARMA MANSA",
+        "sunday_duty": false,
+        "working_hours": 11
+    },
+    {
+        "employee_code": 331,
+        "employee_fname": "SHANKY JINDAL",
+        "sunday_duty": false,
+        "working_hours": 11
+    },
+    {
+        "employee_code": 213,
+        "employee_fname": "MUKESH K MANSA",
+        "sunday_duty": false,
+        "working_hours": 11
+    },
+    {
+        "employee_code": 623,
+        "employee_fname": "MUKESH K MANSA",
+        "sunday_duty": false,
+        "working_hours": 12
+    },
+    {
+        "employee_code": 407,
+        "employee_fname": "MUKESH K MANSA",
+        "sunday_duty": false,
+        "working_hours": 12
+    },
+    {
+        "employee_code": 829,
+        "employee_fname": "Munish UP",
+        "sunday_duty": true,
+        "working_hours": 10
+    },
+    {
+        "employee_code": 828,
+        "employee_fname": "",
+        "sunday_duty": true,
+        "working_hours": 10
+    },
+    {
+        "employee_code": 6016,
+        "sunday_duty": true,
+        "employee_fname": "Sunita Up",
+        "working_hours": 10
+    }
+]

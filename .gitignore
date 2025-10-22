@@ -1,0 +1,11 @@
+
+#  extra json
+attendance_report.json
+attendance_report.spec
+attendance.json
+
+
+
+tests/
+dist/
+data/
