@@ -12,10 +12,6 @@ from writer import write_report
 
 # ===== User input =======
 date = get_valid_date()
-
-
-
-
 def preparing_excel(file_name: str):
     wb = None
     try: 

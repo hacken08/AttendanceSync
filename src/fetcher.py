@@ -278,9 +278,6 @@ def fetch_month_attendance(month):
     return data
 
 
-
-
-
 def update_employee(employee_code: int, att_date: datetime):
     """Update employee attendance intelligently (A/P/Miss transitions)."""
     try:
@@ -393,5 +390,10 @@ def update_employee(employee_code: int, att_date: datetime):
 
     except Exception as e:
         print(f"❌ Error updating record: {e}")
+
+
+
+def get_employee():
+    pass
 
 

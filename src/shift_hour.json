@@ -58,5 +58,17 @@
         "sunday_duty": true,
         "employee_fname": "Sunita Up",
         "working_hours": 10
+    },
+    {
+        "employee_code": 31,
+        "sunday_duty": true,
+        "employee_fname": "Ajay",
+        "working_hours": 10
+    },
+    {
+        "employee_code": 32,
+        "sunday_duty": true,
+        "employee_fname": "Harjeet",
+        "working_hours": 10
     }
 ]

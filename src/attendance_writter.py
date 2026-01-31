@@ -1,11 +1,12 @@
+import platform
 from datetime import datetime
 import pandas as pd
-import json 
 from logger import logger 
 from fetcher import fetch_attendance, fetch_month_attendance, update_employee
 from utils import get_valid_date, get_valid_month
 from writer import write_to_excel
-import sys
+
+print(platform.architecture())
 
 def get_excel_path():
     #  ====== User inputs ======
@@ -22,7 +23,8 @@ if __name__ == "__main__":
 1). Mark attendance for a day.
 2). Mark attendance for a month.
 3). Update employee data.
-Select from Above Menu:  """))
+Select from Above Menu:  
+        """))
         
         match menu_option:
             case 1:

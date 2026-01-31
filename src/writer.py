@@ -42,7 +42,6 @@ def write_to_excel(data, excile_path):
 
         logging.debug(f"Processing employee {emp_id} - {emp_name} | Date: {att_date}")
         
-        
         # Month check
         month_str = att_date.strftime("%b").upper()
         if month_str != sheet_month:
@@ -96,6 +95,7 @@ def write_to_excel(data, excile_path):
                 
         # Getting the day of attendance date
         mention_day_in_excel = ws.cell(row=7, column=date_col).value
+        print("{DEBUG} mention_day_in_excel  -> ", mention_day_in_excel)
         actull_day = att_date.strftime("%a")
         
         if mention_day_in_excel.lower() != actull_day.lower():
@@ -104,13 +104,12 @@ def write_to_excel(data, excile_path):
         # ===== Apply Attendance Rules =====
         att_mark = ""
         overtime_hours = ""
-        working_hour = 10
+        working_hour = 8.5
         sunday_duty = False
         
         # Checking users working hour from json
         working_hour, sunday_duty = get_empl_working_hour(emp_code)
-        
-
+    
         if in_time.strftime("%H:%M") == "00:00" and out_time.strftime("%H:%M") == "00:00":
             att_mark = "A" if actull_day.lower() != "sun" and sunday_duty == False else "P"
         elif in_time.strftime("%H:%M") != "00:00" and out_time.strftime("%H:%M") == "00:00":

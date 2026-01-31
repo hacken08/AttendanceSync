@@ -13,9 +13,10 @@ import pyodbc
 
 
 config = {
-    "db_path": r"C:\Program Files (x86)\ONtime\ACCESSDB\ontime_att.mdb",
-    # "db_path": r"D:\auto_attendancer\data\ontime_att.mdb",
     "db_password": "sss",
+    "db_path": r"D:\VS code\AttendanceSync\data\ontime_att.mdb",
+    # "db_path": r"D:\VS code\AttendanceSync\data\ACO Factory Att.mdb",
+    # "db_path": r"D:\auto_attendancer\data\ontime_att.mdb",
 }
 
 
@@ -101,12 +102,14 @@ def round_to_half_hour(hours):
     return round(hours * 2) / 2  # rounds to nearest 0.5
 
 
-def calculate_ot_ut(in_time, out_time, day, sunday_duty=False, standard_hours=10, grace_minutes=20):
+def calculate_ot_ut(in_time, out_time, day, sunday_duty=False, standard_hours=8.5, grace_minutes=20):
     """
     Calculate the working hour undertime and overtime of employees.
     """
     # Total worked hours
     total_hours = (out_time - in_time).total_seconds() / 3600
+    logging.debug(f"in: {in_time} & Out time:  {out_time} & standar hours: {standard_hours}")
+    logging.debug(f"Total hour worked: {total_hours}")
 
     # Grace in hours
     grace = grace_minutes / 60
@@ -141,12 +144,12 @@ def get_empl_working_hour(emp_code) -> Tuple[int, bool]:
                 if empl["employee_code"] == emp_code:
                     return empl["working_hours"], empl["sunday_duty"]
 
-            return 10, False
+            return 8.5, False
 
     except Exception as e:
         logger.error("Unable to find shift_hour.json")
         sys.exit()
-        return 10, False
+        return 8.5, False
 
 
 
